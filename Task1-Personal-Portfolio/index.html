@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Naol Takele | Aspiring Full-Stack Developer</title>
+  <meta name="description" content="Portfolio of Naol Takele, a Computer Science student at Admas University and aspiring Full-Stack Developer building responsive, user-friendly web applications.">
+  <meta name="theme-color" content="#0A0F1C">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Naol Takele | Aspiring Full-Stack Developer">
+  <meta property="og:description" content="Computer Science student building responsive web applications. Explore projects, skills, and resume.">
+  <meta property="og:image" content="assets/images/profile.jpg">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Apply saved theme before first paint to avoid a flash -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+      document.documentElement.classList.add("js");
+    })();
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+    <symbol id="i-layout" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 9v11"/></symbol>
+    <symbol id="i-server" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.01M7 16.5h.01"/></symbol>
+    <symbol id="i-puzzle" viewBox="0 0 24 24"><path d="M9 3h6v4a2 2 0 1 0 4 0v4h-4a2 2 0 1 0 0 4h4v6H9v-4a2 2 0 1 0-4 0v-4h4a2 2 0 1 0 0-4H5V3z" transform="translate(-1 0)"/></symbol>
+    <symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></symbol>
+    <symbol id="i-tools" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.4 2.4-2.6-.6-.6-2.6z"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 20h16"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></symbol>
+    <symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 5v14m0 0l-6-6m6 6l6-6"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Naol Takele, home">
+        <span class="brand-mark" aria-hidden="true">NT</span>
+        <span class="brand-name">Naol Takele</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#resume" class="nav-link">Resume</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li class="mobile-only"><a href="#contact" class="btn btn-primary btn-block">Let's Talk</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to light theme">
+          <svg class="icon icon-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+          <svg class="icon icon-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+        </button>
+        <a class="btn btn-primary nav-cta" href="#contact">Let's Talk</a>
+        <button class="icon-btn menu-btn" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <svg class="icon icon-open" aria-hidden="true"><use href="#i-menu"/></svg>
+          <svg class="icon icon-close" aria-hidden="true"><use href="#i-close"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="badge"><span class="badge-dot" aria-hidden="true"></span>AVAILABLE FOR OPPORTUNITIES</p>
+          <h1 id="hero-title" class="hero-title">
+            <span class="hero-hi">Hi, I'm Naol Takele.</span>
+            <span class="hero-role"><span class="accent">Aspiring Full-Stack Developer</span> building modern web experiences.</span>
+          </h1>
+          <p class="lead">I'm a Computer Science student at Admas University learning to build responsive, user-friendly web applications, from the interface to the backend.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">Explore My Work</a>
+            <a class="btn btn-secondary" href="resume/Naol-Takele-CV.pdf" download>
+              <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>Download Resume
+            </a>
+            <a class="text-link" href="#contact">Let's Connect</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="photo-frame">
+            <img src="assets/images/profile.jpg" alt="Portrait of Naol Takele" width="800" height="800" fetchpriority="high">
+          </div>
+          <div class="code-card" aria-label="Code snippet describing the developer">
+            <div class="code-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+<pre><code><span class="k">const</span> developer = {
+  name: <span class="s">"Naol Takele"</span>,
+  role: <span class="s">"Aspiring Full-Stack Developer"</span>,
+  school: <span class="s">"Admas University"</span>
+};</code></pre>
+          </div>
+        </div>
+      </div>
+      <a class="scroll-hint" href="#about" aria-label="Scroll to About section">
+        <svg class="icon" aria-hidden="true"><use href="#i-arrow-down"/></svg>
+      </a>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-kicker">About Me</p>
+          <h2 id="about-title">A Computer Science student on the path to Full-Stack Development.</h2>
+        </header>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>I am a motivated Computer Science student at Admas University with a strong passion for technology and software development. I am aspiring to become a professional Full-Stack Developer, with an interest in building modern, responsive, and user-friendly web applications.</p>
+            <p>I am eager to learn new technologies, improve my problem-solving skills, and gain practical experience while contributing to innovative projects.</p>
+            <p class="strengths-label">My strengths</p>
+            <ul class="chips strengths" aria-label="Personal strengths">
+              <li>Problem-solving</li><li>Teamwork</li><li>Quick learning</li><li>Time management</li><li>Creativity</li><li>Attention to detail</li>
+            </ul>
+          </div>
+          <ul class="feature-list">
+            <li class="feature reveal">
+              <svg class="icon icon-lg" aria-hidden="true"><use href="#i-layout"/></svg>
+              <div><h3>Frontend Development</h3><p>Building responsive and accessible user interfaces.</p></div>
+            </li>
+            <li class="feature reveal">
+              <svg class="icon icon-lg" aria-hidden="true"><use href="#i-server"/></svg>
+              <div><h3>Backend Development</h3><p>Learning Java, Spring Boot and REST APIs.</p></div>
+            </li>
+            <li class="feature reveal">
+              <svg class="icon icon-lg" aria-hidden="true"><use href="#i-puzzle"/></svg>
+              <div><h3>Education</h3><p>B.Sc. in Computer Science at Admas University (currently studying).</p></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS (edit the <li> items to add, remove or update) -->
+    <section class="section section-alt" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-kicker">Technical Skills</p>
+          <h2 id="skills-title">Languages and tools I use, with a self-assessed level for my core skills.</h2>
+        </header>
+        <div class="skills-grid">
+          <article class="skill-card skill-wide reveal">
+            <h3><svg class="icon" aria-hidden="true"><use href="#i-layout"/></svg>Frontend</h3>
+            <ul class="meters">
+              <li class="meter">
+                <div class="meter-head"><span>HTML</span><span>85%</span></div>
+                <div class="meter-track" role="progressbar" aria-label="HTML proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="85">
+                  <span class="meter-fill" style="--w: 85%"></span>
+                </div>
+              </li>
+              <li class="meter">
+                <div class="meter-head"><span>CSS</span><span>90%</span></div>
+                <div class="meter-track" role="progressbar" aria-label="CSS proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="90">
+                  <span class="meter-fill" style="--w: 90%"></span>
+                </div>
+              </li>
+              <li class="meter">
+                <div class="meter-head"><span>JavaScript</span><span>80%</span></div>
+                <div class="meter-track" role="progressbar" aria-label="JavaScript proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80">
+                  <span class="meter-fill" style="--w: 80%"></span>
+                </div>
+              </li>
+            </ul>
+          </article>
+          <article class="skill-card skill-wide reveal">
+            <h3><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg>Programming Languages</h3>
+            <ul class="meters">
+              <li class="meter">
+                <div class="meter-head"><span>Java</span><span>75%</span></div>
+                <div class="meter-track" role="progressbar" aria-label="Java proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="75">
+                  <span class="meter-fill" style="--w: 75%"></span>
+                </div>
+              </li>
+              <li class="meter">
+                <div class="meter-head"><span>C++</span><span>70%</span></div>
+                <div class="meter-track" role="progressbar" aria-label="C++ proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="70">
+                  <span class="meter-fill" style="--w: 70%"></span>
+                </div>
+              </li>
+            </ul>
+          </article>
+          <article class="skill-card reveal">
+            <h3><svg class="icon" aria-hidden="true"><use href="#i-server"/></svg>Backend</h3>
+            <ul class="chips"><li>Java</li><li>Spring Boot</li><li>REST APIs</li></ul>
+          </article>
+          <article class="skill-card reveal">
+            <h3><svg class="icon" aria-hidden="true"><use href="#i-database"/></svg>Databases</h3>
+            <ul class="chips"><li>MongoDB</li><li>MySQL</li></ul>
+          </article>
+          <article class="skill-card reveal">
+            <h3><svg class="icon" aria-hidden="true"><use href="#i-tools"/></svg>Tools</h3>
+            <ul class="chips"><li>Git</li><li>GitHub</li><li>Visual Studio Code</li></ul>
+          </article>
+        </div>
+        <p class="skills-note reveal">Percentages are my own self-assessment, not certifications.</p>
+      </div>
+    </section>
+
+    <!-- PROJECTS (cards are rendered from the PROJECTS array in script.js) -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-kicker">Featured Projects</p>
+          <h2 id="projects-title">Projects I've built.</h2>
+        </header>
+        <div class="filters reveal" role="group" aria-label="Filter projects by category">
+          <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter" type="button" data-filter="frontend" aria-pressed="false">Frontend</button>
+          <button class="filter" type="button" data-filter="backend" aria-pressed="false">Backend</button>
+          <button class="filter" type="button" data-filter="fullstack" aria-pressed="false">Full-Stack</button>
+        </div>
+        <div class="project-grid" id="project-grid"></div>
+        <p class="empty-state" id="project-empty" hidden>No projects in this category yet.</p>
+        <noscript><p class="empty-state">Enable JavaScript to view the project list.</p></noscript>
+      </div>
+    </section>
+
+    <!-- RESUME -->
+    <section class="section section-alt" id="resume" aria-labelledby="resume-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-kicker">My Resume</p>
+          <h2 id="resume-title">Learn more about my background, technical skills, and projects.</h2>
+        </header>
+        <article class="resume-card reveal">
+          <span class="resume-icon" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-file"/></svg></span>
+          <div class="resume-body">
+            <h3>Naol Takele — Computer Science Student</h3>
+            <p>My education at Admas University, technical skills, strengths, and career objective, as a one-page PDF.</p>
+          </div>
+          <div class="resume-actions">
+            <a class="btn btn-primary" href="resume/Naol-Takele-CV.pdf" download>
+              <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>Download Resume
+            </a>
+            <a class="btn btn-secondary" href="resume/Naol-Takele-CV.pdf" target="_blank" rel="noopener noreferrer">View Resume</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-kicker">Contact</p>
+          <h2 id="contact-title">Let's Work Together</h2>
+          <p class="section-sub">Have an idea, project, or opportunity? I'd be happy to connect and discuss how I can contribute.</p>
+        </header>
+        <div class="contact-grid">
+          <ul class="contact-list reveal">
+            <li>
+              <a class="contact-item" data-contact="email" href="#contact">
+                <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
+                <span><strong>Email</strong><span class="contact-value">naolambisa21@gmail.com</span></span>
+              </a>
+            </li>
+            <li>
+              <a class="contact-item" data-contact="phone" href="#contact">
+                <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+                <span><strong>Phone</strong><span class="contact-value">+251 951 311 159</span></span>
+              </a>
+            </li>
+            <li>
+              <div class="contact-item">
+                <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+                <span><strong>Location</strong><span class="contact-value">Addis Ababa, Ethiopia</span></span>
+              </div>
+            </li>
+            <li>
+              <a class="contact-item" data-contact="github" href="#contact">
+                <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>
+                <span><strong>GitHub</strong><span class="contact-value">@Naol-Ambisa</span></span>
+              </a>
+            </li>
+            <li>
+              <a class="contact-item" data-contact="linkedin" href="#contact">
+                <svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg>
+                <span><strong>LinkedIn</strong><span class="contact-value">linkedin.com/in/naol-takele12</span></span>
+              </a>
+            </li>
+          </ul>
+
+          <form class="contact-form reveal" id="contact-form" novalidate>
+            <div class="field">
+              <label for="name">Full Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error">
+              <p class="error" id="name-error" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="email">Email Address</label>
+              <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error">
+              <p class="error" id="email-error" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="subject">Subject</label>
+              <input id="subject" name="subject" type="text" required aria-describedby="subject-error">
+              <p class="error" id="subject-error" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required aria-describedby="message-error"></textarea>
+              <p class="error" id="message-error" role="alert"></p>
+            </div>
+            <button class="btn btn-primary" id="submit-btn" type="submit">Send Message</button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year">2026</span> Naol Takele. All rights reserved.</p>
+      <a class="text-link" href="#top">Back to top</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

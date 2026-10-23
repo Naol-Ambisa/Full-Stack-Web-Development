@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#111c2e"/>
+      <stop offset="1" stop-color="#243e77"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#background)"/>
+  <rect x="64" y="48" width="672" height="404" rx="22" fill="#111c2e" fill-opacity=".55" stroke="#3b82f6" stroke-opacity=".7" stroke-width="2"/>
+  <circle cx="400" cy="176" r="72" fill="#3b82f6" fill-opacity=".18" stroke="#60a5fa" stroke-width="3"/>
+  <path d="M386 140v72l58-36z" fill="#f8fafc"/>
+  <g fill="#60a5fa">
+    <rect x="252" y="166" width="10" height="22" rx="5"/>
+    <rect x="274" y="150" width="10" height="54" rx="5"/>
+    <rect x="296" y="160" width="10" height="34" rx="5"/>
+    <rect x="494" y="160" width="10" height="34" rx="5"/>
+    <rect x="516" y="150" width="10" height="54" rx="5"/>
+    <rect x="538" y="166" width="10" height="22" rx="5"/>
+  </g>
+  <text x="400" y="326" fill="#f8fafc" font-family="Arial, sans-serif" font-size="44" font-weight="700" text-anchor="middle">NT Music Player</text>
+  <text x="400" y="364" fill="#a9bbd5" font-family="Arial, sans-serif" font-size="19" font-weight="600" text-anchor="middle">Your music, beautifully organized</text>
+</svg>

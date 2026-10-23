@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="SkyCast gives you current weather conditions and a five-day forecast for cities around the world.">
+
+    <meta name="theme-color" content="#3478f6">
+
+    <title>Weather-Forecast</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="app-container">
+
+        <header class="header">
+            <a href="#" class="brand" aria-label="SkyCast home">
+                <span class="brand-icon">☀</span>
+
+                <span class="brand-text">
+                    <strong>SkyCast</strong>
+                    <small>Weather at a glance</small>
+                </span>
+            </a>
+
+            <div class="header-date">
+                <span id="current-date">Loading date...</span>
+            </div>
+        </header>
+
+        <main>
+            <section class="welcome-section">
+                <div>
+                    <p class="eyebrow">YOUR WEATHER DASHBOARD</p>
+
+                    <h1>Discover your weather.</h1>
+
+                    <p class="welcome-description">
+                        Stay informed about the weather wherever life takes you.
+                    </p>
+                </div>
+            </section>
+
+            <section class="search-section" aria-label="Search for a city">
+                <form id="search-form" class="search-form">
+                    <span class="search-icon" aria-hidden="true">⌕</span>
+
+                    <label class="visually-hidden" for="city-input">
+                        Enter a city name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="city-input"
+                        placeholder="Search a city, e.g. Addis Ababa"
+                        autocomplete="off"
+                        required
+                    >
+
+                    <button type="submit" id="search-button">
+                        Search Weather
+                    </button>
+                    <button type="button" id="location-button" class="location-button">
+                        Use my location
+                    </button>
+                </form>
+
+                <p id="search-status" class="status-message" role="status" aria-live="polite"></p>
+            </section>
+
+            <div id="loading" class="loading-state" hidden>
+                <div class="spinner" aria-hidden="true"></div>
+                <p>Fetching weather data...</p>
+            </div>
+
+            <div id="error-message" class="error-message" role="alert" hidden></div>
+
+            <div id="weather-dashboard" hidden>
+
+                <section class="current-weather-section">
+                    <div class="section-heading">
+                        <div>
+                            <p class="eyebrow">CURRENT CONDITIONS</p>
+                            <h2>Today's Weather</h2>
+                        </div>
+
+                        <div class="unit-control">
+                            <label for="temperature-unit">Temperature</label>
+
+                            <select id="temperature-unit">
+                                <option value="C">Celsius °C</option>
+                                <option value="F">Fahrenheit °F</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <article class="weather-hero" id="weather-hero">
+                        <div class="weather-location">
+                            <span class="location-pin" aria-hidden="true">📍</span>
+
+                            <div>
+                                <h2 id="city-name">City Name</h2>
+                                <p id="country-name">Country</p>
+                            </div>
+                        </div>
+
+                        <div class="current-weather-content">
+                            <div class="temperature-block">
+                                <p class="temperature-label">Current temperature</p>
+
+                                <p class="temperature">
+                                    <span id="current-temperature">--</span>
+                                    <span class="degree">°C</span>
+                                </p>
+
+                                <p id="weather-description" class="weather-description">
+                                    Weather conditions
+                                </p>
+
+                                <p class="feels-like">
+                                    Feels like
+                                    <span id="feels-like">--°C</span>
+                                </p>
+                            </div>
+
+                            <div class="weather-illustration">
+                                <span
+                                    id="weather-icon"
+                                    class="weather-icon"
+                                    role="img"
+                                    aria-label="Current weather condition"
+                                >🌤️</span>
+                            </div>
+                        </div>
+
+                        <div class="temperature-range">
+                            <div>
+                                <span>↓</span>
+                                <span>Min</span>
+                                <strong id="minimum-temperature">--°C</strong>
+                            </div>
+
+                            <div>
+                                <span>↑</span>
+                                <span>Max</span>
+                                <strong id="maximum-temperature">--°C</strong>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+
+                <section class="metrics-section">
+                    <div class="section-heading">
+                        <div>
+                            <p class="eyebrow">WEATHER DETAILS</p>
+                            <h2>Weather Highlights</h2>
+                        </div>
+                    </div>
+
+                    <div class="metrics-grid">
+                        <article class="metric-card">
+                            <div class="metric-top">
+                                <span class="metric-icon humidity-icon">💧</span>
+                                <span class="metric-label">Humidity</span>
+                            </div>
+
+                            <p class="metric-value">
+                                <span id="humidity">--</span>
+                                <span>%</span>
+                            </p>
+
+                            <p class="metric-description">Moisture in the air</p>
+                        </article>
+
+                        <article class="metric-card">
+                            <div class="metric-top">
+                                <span class="metric-icon wind-icon">🌬️</span>
+                                <span class="metric-label">Wind Speed</span>
+                            </div>
+
+                            <p class="metric-value">
+                                <span id="wind-speed">--</span>
+                                <span>m/s</span>
+                            </p>
+
+                            <p class="metric-description">Current wind conditions</p>
+                        </article>
+
+                        <article class="metric-card">
+                            <div class="metric-top">
+                                <span class="metric-icon pressure-icon">◉</span>
+                                <span class="metric-label">Pressure</span>
+                            </div>
+
+                            <p class="metric-value">
+                                <span id="pressure">--</span>
+                                <span>hPa</span>
+                            </p>
+
+                            <p class="metric-description">Atmospheric pressure</p>
+                        </article>
+
+                        <article class="metric-card">
+                            <div class="metric-top">
+                                <span class="metric-icon visibility-icon">👁</span>
+                                <span class="metric-label">Visibility</span>
+                            </div>
+
+                            <p class="metric-value">
+                                <span id="visibility">--</span>
+                                <span>km</span>
+                            </p>
+
+                            <p class="metric-description">How far you can see</p>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="forecast-section">
+                    <div class="section-heading">
+                        <div>
+                            <p class="eyebrow">PLAN AHEAD</p>
+                            <h2>5-Day Forecast</h2>
+                        </div>
+                    </div>
+
+                    <div id="forecast-container" class="forecast-grid" aria-live="polite"></div>
+                </section>
+
+                <div class="update-information">
+                    <span class="update-dot"></span>
+
+                    <p>
+                        Last updated:
+                        <span id="last-updated">--</span>
+                    </p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>
+                © <span id="footer-year"></span>
+                SkyCast. Weather information provided by Open-Meteo.
+            </p>
+
+            <p class="footer-note">Stay informed. Plan confidently.</p>
+        </footer>
+    </div>
+</body>
+</html>
